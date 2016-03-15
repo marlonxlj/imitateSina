@@ -1,0 +1,44 @@
+//
+//  xinlinggoutong.pch
+//  xinlinggoutong
+//
+//  Created by m on 15/12/15.
+//  Copyright © 2015年 YourDevloper. All rights reserved.
+//
+
+#ifndef xinlinggoutong_pch
+#define xinlinggoutong_pch
+#import "UIImage+XLImage.h"
+#import "UIView+XLFrame.h"
+
+#import "XLAccount.h"
+#import "XLAccountTool.h"
+
+#define XLAuthorizeBaseUrl @"https://api.weibo.com/oauth2/authorize"
+#define XLClient_id     @"178801612"
+#define XLRedirect_uri  @"http://www.baidu.com"
+#define XLClient_secret @"2c6c20545168aedab3472112f3082b1a"
+
+#define XLKeyWindow [UIApplication sharedApplication].keyWindow
+
+#define XLAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingString:@"account.data"]
+/***  cell */
+#define XLStatusCellMargin 10
+#define XLNameFont [UIFont systemFontOfSize:17]
+#define XLTimeFont [UIFont systemFontOfSize:13]
+#define XLSourceFont XLTimeFont
+#define XLTextFont [UIFont systemFontOfSize:16]
+#define XLScreenW [UIScreen mainScreen].bounds.size.width
+
+#ifdef DEBUG
+
+//#define XLLog(...) NSLog( __func__, __LINE__, __VA_ARGS__)
+#define XLLog(...) NSLog(__VA_ARGS__)
+
+#else //发布
+
+#define XLLog(...)
+
+#endif
+
+#endif /* xinlinggoutong_pch */
